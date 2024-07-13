@@ -1,6 +1,6 @@
 Description:
 
-    This guide helps fetch the hotspot and memory junction temperatures of a AMD gpu passed-through to a Windows VM into 2 .txt files compatible with CoolerControl, so these sensors could be added as custom ones and seen by the host while the VM is on
+    This guide helps fetch the hotspot and memory junction temperatures of a gpu passed-through to a Windows VM (in this case an AMD gpu) into 2 .txt files compatible with CoolerControl, so these sensors could be added as custom ones and seen by the host while the VM is on
 
     This is done by running a python script on the VM which gets the temperatures ("to_be_copied_to_windows_vm/temps.py") via virsh and qemu-agent from the host ("write-temp.py" writes the temperatures to "/tmp/gpu_hotspot_temperature.txt" and "/tmp/gpu_memory_junction_temperature.txt" gathered from "/tmp/temps.txt", which is the redirected output of "get-temp.sh"). "loop_write_temp" just runs this indefinitely.
 
