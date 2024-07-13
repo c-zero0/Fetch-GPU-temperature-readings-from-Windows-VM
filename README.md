@@ -23,7 +23,7 @@ Guide:
     3. Install Qemu Guest Agent (virtio-win iso with drivers at "https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md" - guest agent is in the guest-agent folder)
     4. Download & run Open Hardware Monitor ("https://openhardwaremonitor.org/downloads/")
     5. Edit the scripts as needed for the sensors you need (for reference, here was used a 5700xt and were fetched the core hotspot and memory junction temperatures).
-    6. cd to the folder where the scripts were downloaded, edit the 'GUEST_NAME' variable from "get-temp.sh" with the name of your VM & run loop_write_temp.sh as root (if you can run virsh commands without root, run ./loop_write_temp.sh --no-sudo)
+    6. cd to the folder where the scripts were downloaded, edit the path to where python is installed in the windows guest and the 'GUEST_NAME' variable from "get-temp.sh" with the name of your VM & run loop_write_temp.sh as root (if you can run virsh commands without root, run ./loop_write_temp.sh --no-sudo)
     7. Now create the custom sensors in CoolerControl for the Hotspot and Memory Junction located at "/tmp/gpu_hotspot_temperature.txt" and "/tmp/gpu_memory_junction_temperature.txt"
 
 Many thanks to the guy who wrote https://gist.github.com/jpsutton/8734ce209f7874d5e386d2865c1adc8a and chatgpt
